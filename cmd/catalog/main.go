@@ -9,6 +9,7 @@ import (
 	"github.com/arraysArrais/api-products/internal/service"
 	"github.com/arraysArrais/api-products/internal/webserver"
 	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/chi/v5/middleware"
 )
 
 func main() {
@@ -30,6 +31,8 @@ func main() {
 	WebProductHandler := webserver.NewWebProductHandler(productService)
 
 	router := chi.NewRouter()
+	router.Use(middleware.Logger)
+	router.Use(middleware.Recoverer)
 	router.Get("/category/{id}", WebCategoryHandler.GetCategory)
 	router.Get("/category", WebCategoryHandler.GetCategories)
 	router.Post("/category", WebCategoryHandler.CreateCategory)
