@@ -41,7 +41,7 @@ func main() {
 	router.Get("/product/{id}", WebProductHandler.GetProduct)
 	router.Get("/product", WebProductHandler.GetProducts)
 	router.Get("/product/category/{categoryID}", WebProductHandler.GetProductByCategoryID)
-	router.Post("/prodct", WebProductHandler.CreateProduct)
+	router.Post("/product", WebProductHandler.CreateProduct)
 
 	fmt.Println("Server is running on port ", port)
 
