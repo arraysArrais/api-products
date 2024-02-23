@@ -7,7 +7,7 @@ type Category struct {
 	Name string
 }
 
-func newCategory(name string) *Category {
+func NewCategory(name string) *Category {
 	return &Category{
 		ID:   uuid.New().String(),
 		Name: name,
@@ -23,7 +23,7 @@ type Product struct {
 	ImageURL    string
 }
 
-func newProduct(name, description string, price float64, categoryID, imageURL string) *Product {
+func NewProduct(name, description string, categoryID, imageURL string, price float64) *Product {
 	return &Product{
 		ID:          uuid.New().String(),
 		Name:        name,
