@@ -10,6 +10,7 @@ import (
 	"github.com/arraysArrais/api-products/internal/webserver"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
