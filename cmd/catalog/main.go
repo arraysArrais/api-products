@@ -14,7 +14,7 @@ import (
 )
 
 func main() {
-	db, err := sql.Open("mysql", "root:root@tcp(localhost:3306)/go-api-products")
+	db, err := sql.Open("mysql", "root:@tcp(localhost:3306)/go-api-products")
 	if err != nil {
 		panic(err.Error())
 	}
